@@ -1,5 +1,3 @@
-import json
-
 def plain_formatter(diff):
     result = plain(diff)
     return "\n".join(result)
