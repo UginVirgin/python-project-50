@@ -52,7 +52,7 @@ def status_changed(key, value):
     value2_format = format_value(value2)
 
     return f"""
-    Property '{key}' was updated. From {value1_format} to {value2_format}
+Property '{key}' was updated. From {value1_format} to {value2_format}
     """
 
 def status_added(key, value):
