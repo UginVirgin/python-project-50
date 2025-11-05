@@ -6,9 +6,6 @@ from gendiff.formatters.plain_formatter import plain_formatter
 from gendiff.formatters.stylish_formatter import stylish
 
 
-
-
-
 formatters = {
     "json": json_formatter,
     "plain": plain_formatter,
@@ -48,7 +45,6 @@ def main():
     formatter = args.format
     diff = generate_diff(path_to_file1, path_to_file2, formatter)
     print(diff)
-
 
 
 if __name__ == "__main__":

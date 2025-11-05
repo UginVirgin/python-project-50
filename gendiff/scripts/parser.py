@@ -2,6 +2,7 @@ import os
 import json
 import yaml
 
+
 def parser(filepath):
     format = os.path.splitext(filepath)[1].lower()
 
