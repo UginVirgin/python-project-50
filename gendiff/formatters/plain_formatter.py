@@ -8,14 +8,14 @@ def plain(diff, path=""):
 
     def add_new_line(status, value, full_key):
 
-            if status == "changed":
-                lines.append(status_changed(full_key, value))
-            elif status == "added":
-                lines.append(status_added(full_key, value))
-            elif status == "removed":
-                lines.append(status_removed(full_key, value))
-            elif status == "nested":
-                lines.extend(plain(value, full_key))
+        if status == "changed":
+            lines.append(status_changed(full_key, value))
+        elif status == "added":
+            lines.append(status_added(full_key, value))
+        elif status == "removed":
+            lines.append(status_removed(full_key, value))
+        elif status == "nested":
+            lines.extend(plain(value, full_key))
 
     for key, (status, value) in diff.items():
         full_key = full_path(path, key)
@@ -48,10 +48,11 @@ def format_value(value):
 
 def status_changed(key, value):
     value1, value2 = value
-    value1_format = format_value(value1)
-    value2_format = format_value(value2)
+    value1_form = format_value(value1)
+    value2_form = format_value(value2)
 
-    return f"Property '{key}' was updated. From {value1_format} to {value2_format}"
+    return f"Property '{key}' was updated. From {value1_form} to {value2_form}"
+
 
 def status_added(key, value):
     value = format_value(value)
