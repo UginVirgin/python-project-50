@@ -16,7 +16,7 @@ formatters = {
 }
 
 
-def generate_diff(file_path1, file_path2, formatter="json"):
+def generate_diff(file_path1, file_path2, formatter="stylish"):
     data1 = parser(file_path1)
     data2 = parser(file_path2)
     diff = find_diff(data1, data2)
