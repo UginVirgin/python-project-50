@@ -51,14 +51,14 @@ def status_changed(key, value):
     value1_format = format_value(value1)
     value2_format = format_value(value2)
 
-    return f"Property {key} was updated. {value1_format} to {value2_format}"
+    return f"Property '{key}' was updated. {value1_format} to {value2_format}"
 
 def status_added(key, value):
     value = format_value(value)
-    return f"Property {key} was added with value: {value}"
+    return f"Property '{key}' was added with value: {value}"
 
 def status_removed(key, value):
-    return f"Property {key} was removed"
+    return f"Property '{key}' was removed"
 
 
 
