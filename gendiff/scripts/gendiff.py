@@ -39,7 +39,7 @@ def main():
             type=str,
             choices=['plain', 'json', "stylish"],
             help='set format of output',
-            default="json"
+            default="stylish"
     )
 
     args = parser.parse_args()

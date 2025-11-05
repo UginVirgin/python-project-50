@@ -33,6 +33,11 @@ from gendiff.scripts.gendiff import generate_diff
         "tests/fixtures/file1_nested.json", 
      "tests/fixtures/file2_nested.json", "stylish"
      "tests/expected_result_nested_stylilsh.txt"
+     ),
+     (
+        "tests/fixtures/file1.yaml", 
+     "tests/fixtures/file2.yaml", "json",
+     "tests/expected_result_json.txt"
      )
 
 ])
