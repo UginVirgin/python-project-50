@@ -1,6 +1,7 @@
 import pytest
 from gendiff.scripts.gendiff import generate_diff
 
+
 @pytest.mark.parametrize("file1, file2, formatter, expected_result", [
     (
         "file1.json",
@@ -46,7 +47,14 @@ from gendiff.scripts.gendiff import generate_diff
     ),
 ])
 
-def test_gendiff(get_fixture_path, read_fixture, file1, file2, formatter, expected_result):
+
+def test_gendiff(
+    get_fixture_path, read_fixture, 
+    file1, 
+    file2, 
+    formatter, 
+    expected_result
+    ):
     file1_path = get_fixture_path(file1)
     file2_path = get_fixture_path(file2)
     expected_result_read = read_fixture(expected_result)
