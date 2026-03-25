@@ -46,8 +46,6 @@ from gendiff.scripts.gendiff import generate_diff
         "expected_result_json.txt"
     ),
 ])
-
-
 def test_gendiff(
     get_fixture_path, read_fixture, 
     file1, 
